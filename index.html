@@ -66,34 +66,58 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Trabajador</th>
+                        <th scope="col">Sueldo</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td>Diego</td>
+                        <td>$
+                            <span>0</span>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td>Alex</td>
+                        <td>$
+                            <span>0</span>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
+                        <td>Rodrigo</td>
+                        <td>$
+                            <span>0</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Totti</td>
+                        <td>$
+                            <span>0</span>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase-firestore.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyAWTw9zUGnaBnLJojw2Z8HAqxIRaZELP3w",
+                authDomain: "paneles-b395b.firebaseapp.com",
+                databaseURL: "https://paneles-b395b.firebaseio.com",
+                projectId: "paneles-b395b",
+                storageBucket: "",
+                messagingSenderId: "565617372195"
+            };
+            firebase.initializeApp(config);
+            var db = firebase.firestore();
+        </script>
+        <script src="javascript.js"></script>
 </body>
-<script src="javascript.js"></script>
 
 </html>

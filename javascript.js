@@ -10,7 +10,7 @@ function semana() {
     var uf = 8;
     var valoruf = document.getElementById("uf").innerText;
     var valor = (uf * valoruf) * sum;
-    document.getElementById("monto").innerText = Math.round(valor).toLocaleString("de-DE",1);
+    document.getElementById("monto").innerText = Math.round(valor).toLocaleString("de-DE", 1);
 }
 
 function onLoad() {
@@ -20,6 +20,20 @@ function onLoad() {
         })
         .then(function (data) {
             document.getElementById("uf").innerText = data["serie"][0].valor;
-            
+
+        });
+}
+
+function login() {
+    firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings)
+        .then(function () {
+            // The link was successfully sent. Inform the user.
+            // Save the email locally so you don't need to ask the user for it again
+            // if they open the link on the same device.
+            window.localStorage.setItem('emailForSignIn', email);
+        })
+        .catch(function (error) {
+            // Some error occurred, you can inspect the code: error.code
+            console.log(error.code);
         });
 }
